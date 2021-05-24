@@ -1,5 +1,5 @@
 # Simple-Image-Gallery-Asp.Net-5
-Simple Gallery With Asp .Net 5 </br> Ef Core 5 </br> Microsoft SQL Server 
+Simple Gallery And Image Management With Asp .Net 5 </br> Ef Core 5 </br> Microsoft SQL Server 
 
 <hr/>
 <br/>
