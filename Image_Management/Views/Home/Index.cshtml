@@ -1,0 +1,43 @@
+﻿@model IEnumerable<Image_Management.Models.FileModel>
+
+@{
+    ViewData["Title"] = "Home";
+}
+
+<h1>Image List</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+
+            <th>
+                Image
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UploadTime)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+
+                <td>
+                    <img class="img-thumbnail" src="~/Images/@item.ThumbPath" alt="Alternate Text" />
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UploadTime)
+                </td>
+                <td>
+                    <a class="btn btn-primary" asp-action="ShowImage" asp-route-id="@item.Id">Orginal Size</a>
+                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

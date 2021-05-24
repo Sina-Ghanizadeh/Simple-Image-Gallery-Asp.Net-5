@@ -1,0 +1,13 @@
+﻿@model Image_Management.Models.FileModel
+
+@{
+    ViewData["Title"] = "ShowImage";
+}
+
+<a class="btn btn-outline-primary" asp-action="Index">Back to List</a>
+
+<div class="align-content-center">
+    <img src="~/images/@Model.FilePath" class="figure-img" />
+
+</div>
+
